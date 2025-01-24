@@ -1,0 +1,193 @@
+openapi: 3.0.0
+info:
+  title: Liberater demo API
+  version: 1.0.0
+servers:
+  - url: http://192.168.210.26:12000
+  - url: http://127.0.0.1:12000
+paths:
+  /F002DATASYSTEM/APPUSER/GETCONSENT:
+    post:
+      tags:
+        - default
+      summary: GETCONSENT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {}
+      parameters:
+        - name: apiKey
+          in: header
+          schema:
+            type: string
+          example: d69ebc24-84e2-49f0-8e3a-7acd378e9d56
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /F002DATASYSTEM/APPUSER/DATASUBJECTADD:
+    post:
+      tags:
+        - default
+      summary: DATASUBJECTADD
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                CUID: CUID-1732521069024360018-YnCVbxLVDX
+                varsionno: '3'
+                VERSION: test form
+                MUID: '1659900365588'
+                DATASUBJECTNAME: Supic test
+                PHONE: '0867196277'
+                EMAIL: Supic@mail.com
+                SP01: ''
+                SP02: ''
+                SP03: ''
+                SP04: ''
+                SP05: ''
+                LISTANS:
+                  - ANS: 'YES'
+                    DATE: '1724939064546434800'
+                    HTML: <h2>ยินยอมในการใช้ข้อมูลส่วนบุคคล</h2>
+                    QID: QUID-1724939064546434790-fqSloaCrRr
+                    QUESTION: ยินยอมในการใช้ข้อมูลส่วนบุคคล
+                  - ANS: 'YES'
+                    DATE: '1724939119583532500'
+                    HTML: การให้ความยินยอมในความเป็นส่วนตัว
+                    QID: QUID-1724939119583532452-WQASRYiGMf
+                    QUESTION: การให้ความยินยอมในความเป็นส่วนตัว
+                  - ANS: 'NO'
+                    DATE: '1732520488878946000'
+                    HTML: test3 return
+                    QID: QUID-1732520488878946053-esRdOqObuj
+                    QUESTION: test3 return
+                  - ANS: 'NO'
+                    DATE: '1732519788587704800'
+                    HTML: test
+                    QID: QUID-1732519788587704825-zgXBtqWecT
+                    QUESTION: test
+                  - ANS: 'NO'
+                    DATE: '1724602811460944000'
+                    HTML: ทดสอบระบบคำถาม
+                    QID: QUID-1724602811460943934-XFOIYWaloJ
+                    QUESTION: ทดสอบระบบคำถาม
+                  - ANS: 'YES'
+                    DATE: '1724939029697787400'
+                    HTML: ยินยอมในการทำงาน
+                    QID: QUID-1724939029697787407-sljRTbWqHk
+                    QUESTION: ยินยอมในการทำงาน
+      parameters:
+        - name: apiKey
+          in: header
+          schema:
+            type: string
+          example: d69ebc24-84e2-49f0-8e3a-7acd378e9d56
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /F002DATASYSTEM/APPUSER/DATASUBJECTGETLAST:
+    post:
+      tags:
+        - default
+      summary: DATASUBJECTGETLAST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                MUID: '1657700388888'
+      parameters:
+        - name: apiKey
+          in: header
+          schema:
+            type: string
+          example: d69ebc24-84e2-49f0-8e3a-7acd378e9d56
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /F002DATASYSTEM/APPUSER/GETNAMEBYQUID:
+    post:
+      tags:
+        - default
+      summary: GETNAMEBYQUID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                QID: QUID-1724939029697787407-sljRTbWqHk
+      parameters:
+        - name: apiKey
+          in: header
+          schema:
+            type: string
+          example: d69ebc24-84e2-49f0-8e3a-7acd378e9d56
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /F002DATASYSTEM/APPUSER/GETALLLAST:
+    post:
+      tags:
+        - default
+      summary: GETALLLAST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {}
+      parameters:
+        - name: apiKey
+          in: header
+          schema:
+            type: string
+          example: d69ebc24-84e2-49f0-8e3a-7acd378e9d56
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /F002DATASYSTEM/APPUSER/DATASUBJECTEDIT:
+    post:
+      tags:
+        - default
+      summary: DATASUBJECTEDIT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                MUID: '1657700388888'
+                DATASUBJECTNAME: SupiD testUU
+                PHONE: '0867196277'
+                EMAIL: Supic@mail.com
+                SP01: ''
+                SP02: ''
+                SP03: ''
+                SP04: ''
+                SP05: ''
+      parameters:
+        - name: apiKey
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
